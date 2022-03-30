@@ -6,17 +6,17 @@ namespace spiel1
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hallo Spieler! Bitte gib deinen Namen ein: ");
+            Console.WriteLine("Hallo Spieler! Bitte gib Deinen Namen ein: ");
             var playerName = Console.ReadLine();
 
-            while (String.IsNullOrEmpty(playerName))
+            while (String.IsNullOrWhiteSpace(playerName))
             {
                 Console.WriteLine("Ich habe Zeit... ;)");
                 playerName = Console.ReadLine();
             }
 
             Console.WriteLine($"Wir spielen {string.Join(", ", Move.allMoves)}!");
-            Console.WriteLine("Wenn du nicht mehr spielen möchtest, tippe 'Ende' bei der Aufforderung, deinen Zug zu wählen.");
+            Console.WriteLine("Wenn Du nicht mehr spielen möchtest, tippe 'Ende' bei der Aufforderung, Deinen Zug zu wählen.");
 
             var playerScoreCount = 0;
             var pcScoreCount = 0;
@@ -27,7 +27,7 @@ namespace spiel1
             {
                 if (moveRequestIndicator == true)
                 {
-                    Console.WriteLine($"Wähle deinen Zug, {playerName}:");
+                    Console.WriteLine($"Wähle Deinen Zug, {playerName}:");
                 }
 
                 moveRequestIndicator = true;
